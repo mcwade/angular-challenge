@@ -1,0 +1,20 @@
+<table class="table table-noborder">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>State</th>
+            <th>Memory Allocation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of surfArray" [class.red]="getMemory(item) === 'red'" [class.amber]="getMemory(item) === 'amber'">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.state }}</td>
+            <td>{{ item.memoryAllocation * item.instances }}</td>
+        </tr>
+    </tbody>
+</table>

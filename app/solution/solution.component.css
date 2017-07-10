@@ -1,0 +1,53 @@
+table {
+    max-width: 94%;
+    border-collapse: collapse;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th {
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.35);
+    border: none;
+}
+
+table,
+table th,
+table td {
+    text-align: left;
+}
+
+table th,
+table td {
+    text-align: center;
+    padding-top: 1.35rem;
+    padding-bottom: 1.35rem;
+    transition: all 0.2s ease-in-out;
+}
+
+table tr {
+    background: trasparent;
+    transition: background-color 0.4s ease-in-out;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+table tr.amber {
+    background: rgba(255, 203, 99, 0.5);
+}
+
+table tr.red {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+table tr:hover>td {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+table th:first-of-type,
+table td:first-of-type {
+    width: 7%;
+    text-align: center;
+}
