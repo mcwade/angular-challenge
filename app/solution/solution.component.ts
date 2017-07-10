@@ -23,6 +23,8 @@ export class SolutionComponent {
       const getUsage: any = this._IFPService.getFaasUsage$.bind(this._IFPService);
 
       for (let i = 1; i <= this.maxNum; i++) {
+         // Observable Public Methods @ http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html
+         // .zip returns subscribe observable for getInfo and getUsage but does not update output
          const obs = Observable.combineLatest(
             getInfo(i.toString()),
             getUsage(i.toString())
